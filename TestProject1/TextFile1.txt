@@ -1,0 +1,6 @@
+﻿allure generate allure-results --clean -o path/to/allure-report
+
+-- HTML report 
+
+
+allure serve -h localhost
