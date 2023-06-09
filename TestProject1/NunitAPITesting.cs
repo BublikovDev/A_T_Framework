@@ -39,7 +39,7 @@ namespace TestProject1
         public async Task SuccessSignIn()
         {
 
-            SignInRequest request = new SignInRequest() { LoginOrEmail = "DeveloperCreators", Password = "123456TESTss" };
+            SignInRequest request = new SignInRequest() { LoginOrEmail = "DeveloperCreator", Password = "123456TESTss" };
 
             var response = await _httpClient.PostAsJsonAsync("https://localhost:7231/api/auth/signin", request);
 

@@ -33,7 +33,7 @@ namespace TestProject1
 
 
             Task.Delay(5000).Wait();
-            var usernameField = _driver.FindElement(By.Id("usernameSignIn"))!=null?null: _driver.FindElement(By.Id("usernameSignIn"));
+            var usernameField = _driver.FindElement(By.Id("usernameSignIn"));
             
             if(usernameField == null) {
                 throw new Exception("username Field is not found");
@@ -62,7 +62,7 @@ namespace TestProject1
             _driver.Navigate().GoToUrl("https://localhost:7274/signin");
 
 
-            Task.Delay(5000).Wait();
+            Task.Delay(10000).Wait();
             var usernameField = _driver.FindElement(By.Id("usernameSignIn"));
             var passwordField = _driver.FindElement(By.Id("passwordSignIn"));
             usernameField.SendKeys("DeveloperCreators");
