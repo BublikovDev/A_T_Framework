@@ -1,5 +1,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
 
 namespace TestProject1
 {
@@ -21,6 +23,9 @@ namespace TestProject1
             _driver.Dispose();
         }
 
+        [AllureTag("SuccessLoginTest")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureSubSuite("SeleniumAuthentication")]
         [Test]
         public void SuccessLoginTest()
         {
@@ -47,6 +52,10 @@ namespace TestProject1
             Assert.AreEqual("https://localhost:7274/profile",url);
         }
 
+
+        [AllureTag("UnSuccessLoginTest")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureSubSuite("SeleniumAuthentication")]
         [Test]
         public void UnSuccessLoginTest()
         {
@@ -69,7 +78,9 @@ namespace TestProject1
             Assert.AreEqual("https://localhost:7274/signin", url);
         }
 
-
+        [AllureTag("CheckRedirectToSignInWhenNotAuthorized")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureSubSuite("SeleniumAuthentication")]
         [Test]
         public void CheckRedirectToSignInWhenNotAuthorized()
         {
