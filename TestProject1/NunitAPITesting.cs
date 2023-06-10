@@ -41,7 +41,7 @@ namespace TestProject1
 
             SignInRequest request = new SignInRequest() { LoginOrEmail = "DeveloperCreator", Password = "123456TESTss" };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7231/api/auth/signin", request);
+            var response = await _httpClient.PostAsJsonAsync("http://localhost:5231/api/auth/signin", request);
 
             //response.EnsureSuccessStatusCode();
 
@@ -58,7 +58,7 @@ namespace TestProject1
         {
             SignInRequest request = new SignInRequest() { LoginOrEmail = "DeveloperCreators", Password = "123456TESTss" };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7231/api/auth/signin", request);
+            var response = await _httpClient.PostAsJsonAsync("http://localhost:5231/api/auth/signin", request);
 
 
             var responseBody = await response.Content.ReadAsStringAsync();
@@ -76,11 +76,11 @@ namespace TestProject1
 
             SignInRequest request = new SignInRequest() { LoginOrEmail = "DeveloperCreator", Password = "123456TESTss" };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7231/api/auth/signin", request);
+            var response = await _httpClient.PostAsJsonAsync("http://localhost:5231/api/auth/signin", request);
 
             response.EnsureSuccessStatusCode();
 
-            var responseDelete = await _httpClient.DeleteAsync("https://localhost:7231/api/auth/logout");
+            var responseDelete = await _httpClient.DeleteAsync("http://localhost:5231/api/auth/logout");
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }
