@@ -15,6 +15,7 @@ namespace TestProject1
 {
     [TestFixture]
     [AllureNUnit]
+    [AllureDisplayIgnored]
     public class ApiTests
     {
         private HttpClient _httpClient;
@@ -33,7 +34,7 @@ namespace TestProject1
         }
 
         [Test]
-        [AllureTag("Login")]
+        [AllureTag("SuccessSignIn")]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("Authentication")]
         public async Task SuccessSignIn()
@@ -51,7 +52,7 @@ namespace TestProject1
         }
 
         [Test]
-        [AllureTag("Login")]
+        [AllureTag("UnSuccessSignIn")]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("Authentication")]
         public async Task UnSuccessSignIn()
@@ -68,7 +69,7 @@ namespace TestProject1
 
 
         [Test]
-        [AllureTag("Logout")]
+        [AllureTag("SuccessLogout")]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("Authentication")]
         public async Task SuccessLogout()

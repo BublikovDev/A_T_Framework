@@ -2,10 +2,13 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using Allure.Commons;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace TestProject1
 {
     [TestFixture]
+    [AllureNUnit]
+    [AllureDisplayIgnored]
     public class WebUITests
     {
         private IWebDriver _driver;

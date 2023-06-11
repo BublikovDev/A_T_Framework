@@ -1,9 +1,12 @@
 using Allure.Commons;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace TestProject2
 {
     [TestClass]
+    [AllureNUnit]
+    [AllureDisplayIgnored]
     public class UnitTest1
     {
         [AllureTag("Add_ShouldReturnCorrectSum")]

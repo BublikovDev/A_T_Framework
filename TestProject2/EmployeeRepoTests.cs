@@ -6,6 +6,7 @@ using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ using System.Threading.Tasks;
 namespace TestProject2
 {
     [TestClass]
+    [AllureNUnit]
+    [AllureDisplayIgnored]
     public class EmployeeRepositoryTest
     {
         List<Employee> stub;
